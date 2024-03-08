@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-import SwiftUI
-
 struct HomePage: View {
     var body: some View {
         NavigationView {
@@ -17,31 +15,49 @@ struct HomePage: View {
                     .resizable()
                     .scaledToFill()
                     .edgesIgnoringSafeArea(.all)
-                    .opacity(1)
-                
-                VStack {
+                    .overlay(Color.black.opacity(0.3))
+
+                VStack(spacing: 20) {
                     Text("Welcome Rick & Morty fans")
-                        .font(.title)
+                        .font(.custom("YourFontFamily", size: 40, relativeTo: .title))
                         .fontWeight(.bold)
-                        .padding()
-                        .multilineTextAlignment(.center)
-                    
-                    Text("Get involved in the fantastic world")
+                        .foregroundColor(.black)
+                        .shadow(color: .black, radius: 1.5, x: 0, y: 1.5)
                         .multilineTextAlignment(.center)
                         .padding()
-                    
+                        .background(
+                            RoundedRectangle(cornerRadius: 10)
+                                .fill(Color.white.opacity(0.7))
+                                .shadow(color: .white, radius: 2, x: 0, y: 2)
+                        )
+
+                    Text("Get involved in the fantastic world!")
+                        .font(.custom("YourFontFamily", size: 20, relativeTo: .body))
+                        .fontWeight(.bold)
+                        .foregroundColor(.white)
+                        .multilineTextAlignment(.center)
+                        .padding()
+                        
+                        
+
                     NavigationLink(destination: ContentView()) {
                         Text("Start Exploring")
-                            .font(.headline)
-                            .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                            .font(.custom("YourFontFamily", size: 20, relativeTo: .headline))
+                            .fontWeight(.semibold)
                             .padding()
                             .foregroundColor(.white)
                             .background(Color.accentColor)
-                            .cornerRadius(10)
+                            .cornerRadius(15)
+                            .shadow(color: .black, radius: 2, x: 0, y: 2)
                     }
                     .padding()
+                    .background(
+                        RoundedRectangle(cornerRadius: 15)
+                            .fill(Color.accentColor.opacity(0.2))
+                            .shadow(color: .black, radius: 2, x: 0, y: 2)
+                    )
                 }
-                .foregroundColor(.white)
+                .padding()
             }
             .navigationTitle("Home")
             .navigationBarHidden(true)
@@ -49,10 +65,10 @@ struct HomePage: View {
     }
 }
 
-
 struct HomePage_Previews: PreviewProvider {
     static var previews: some View {
         HomePage()
     }
 }
+
 
