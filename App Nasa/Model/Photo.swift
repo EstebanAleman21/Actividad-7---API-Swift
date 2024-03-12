@@ -11,7 +11,7 @@ struct Resultado_API : Codable {
     var results : [Personaje]
 }
 
-struct Personaje : Codable, Identifiable {
+struct Personaje : Codable, Identifiable, Hashable {
     var id : Int
     var name : String
     var status : String

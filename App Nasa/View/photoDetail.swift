@@ -21,6 +21,7 @@ struct PhotoDetail: View {
                         image
                             .resizable()
                             .aspectRatio(contentMode: .fit)
+                            .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
                     case .failure(let error):
                         Text("Failed to load image: \(error.localizedDescription)")
                     @unknown default:
@@ -28,10 +29,7 @@ struct PhotoDetail: View {
                     }
                 }
                 .frame(maxHeight: 300)
-                
-                Text(photo.name)
-                    .font(.title)
-                    .foregroundColor(.primary)
+
                 
                 
                 .padding(.horizontal)
@@ -73,7 +71,7 @@ struct PhotoDetail: View {
                     .padding()
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .navigationTitle("Photo Detail")
+                .navigationTitle(photo.name)
             }
 
 

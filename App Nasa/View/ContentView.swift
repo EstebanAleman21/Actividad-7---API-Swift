@@ -25,10 +25,10 @@ struct ContentView: View {
                 Text("Characters")
             }
             
-            Text("Second Tab Content")
+            HomePage()
                 .tabItem {
-                    Image(systemName: "star")
-                    Text("Second Tab")
+                    Image(systemName: "house.circle")
+                    Text("Home")
                 }
             
             Text("Third Tab Content")

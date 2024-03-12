@@ -40,7 +40,7 @@ struct HomePage: View {
                         
                         
 
-                    NavigationLink(destination: ContentView()) {
+                    NavigationLink(destination: ExploreView()) {
                         Text("Start Exploring")
                             .font(.custom("YourFontFamily", size: 20, relativeTo: .headline))
                             .fontWeight(.semibold)

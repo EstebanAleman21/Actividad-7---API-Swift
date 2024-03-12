@@ -16,6 +16,7 @@
 		5BA2943A2B97C2AF00F8ED69 /* PhotoRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA294392B97C2AF00F8ED69 /* PhotoRow.swift */; };
 		5BA2943C2B980C7A00F8ED69 /* photoDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA2943B2B980C7900F8ED69 /* photoDetail.swift */; };
 		5BA2943E2B980E5A00F8ED69 /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA2943D2B980E5A00F8ED69 /* HomePage.swift */; };
+		5BF8A3742BA0D0F300344E65 /* ExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF8A3732BA0D0F300344E65 /* ExploreView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		5BA294392B97C2AF00F8ED69 /* PhotoRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoRow.swift; sourceTree = "<group>"; };
 		5BA2943B2B980C7900F8ED69 /* photoDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = photoDetail.swift; sourceTree = "<group>"; };
 		5BA2943D2B980E5A00F8ED69 /* HomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
+		5BF8A3732BA0D0F300344E65 /* ExploreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				5BA294292B97B86600F8ED69 /* ContentView.swift */,
+				5BF8A3732BA0D0F300344E65 /* ExploreView.swift */,
 				5BA2943D2B980E5A00F8ED69 /* HomePage.swift */,
 				5BA2943B2B980C7900F8ED69 /* photoDetail.swift */,
 				5BA294392B97C2AF00F8ED69 /* PhotoRow.swift */,
@@ -174,6 +177,7 @@
 				5BA294382B97BA4D00F8ED69 /* PhotoViewModel.swift in Sources */,
 				5BA2942A2B97B86600F8ED69 /* ContentView.swift in Sources */,
 				5BA2943E2B980E5A00F8ED69 /* HomePage.swift in Sources */,
+				5BF8A3742BA0D0F300344E65 /* ExploreView.swift in Sources */,
 				5BA294282B97B86600F8ED69 /* App_NasaApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
