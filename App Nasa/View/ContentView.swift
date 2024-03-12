@@ -9,30 +9,48 @@ import SwiftUI
 
 struct ContentView: View {
     @State var photoVM = PhotoViewModel()
-        
-        var body: some View {
-            
+    
+    var body: some View {
+        TabView {
+            NavigationView {
                 List(photoVM.arrPersonajes) { item in
                     NavigationLink(destination: PhotoDetail(photo: item)) {
                         PhotoRow(photo: item)
                     }
                 }
                 .navigationTitle("Characters")
-                .onAppear {
-                    Task {
-                        do {
-                            try await photoVM.getPersonajesData()
-                        } catch {
-                            print("Error fetching photos: \(error)")
-                        }
-                    }
-                
+            }
+            .tabItem {
+                Image(systemName: "list.bullet")
+                Text("Characters")
+            }
+            
+            Text("Second Tab Content")
+                .tabItem {
+                    Image(systemName: "star")
+                    Text("Second Tab")
+                }
+            
+            Text("Third Tab Content")
+                .tabItem {
+                    Image(systemName: "gear")
+                    Text("Settings")
+                }
+        }
+        .onAppear {
+            Task {
+                do {
+                    try await photoVM.getPersonajesData()
+                } catch {
+                    print("Error fetching photos: \(error)")
+                }
             }
         }
-   }
+    }
+}
 
-   struct ContentView_Previews: PreviewProvider {
-       static var previews: some View {
-           ContentView()
-       }
-   }
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}
