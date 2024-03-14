@@ -9,15 +9,18 @@ import SwiftUI
 
 struct ContentView: View {
     @State var photoVM = PhotoViewModel()
+    @State private var searchText = ""
     
     var body: some View {
         TabView {
             NavigationView {
-                List(photoVM.arrPersonajes) { item in
-                    NavigationLink(destination: PhotoDetail(photo: item)) {
-                        PhotoRow(photo: item)
-                    }
-                }
+                            List(photoVM.arrPersonajes.filter {
+                                searchText.isEmpty || $0.name.localizedCaseInsensitiveContains(searchText)
+                            }) { item in
+                                NavigationLink(destination: PhotoDetail(photo: item)) {
+                                    PhotoRow(photo: item)
+                                }
+                            }
                 .navigationTitle("Characters")
             }
             .tabItem {
@@ -30,11 +33,10 @@ struct ContentView: View {
                     Image(systemName: "house.circle")
                     Text("Home")
                 }
-            
-            Text("Third Tab Content")
+            SearchView(searchText: $searchText)
                 .tabItem {
-                    Image(systemName: "gear")
-                    Text("Settings")
+                    Image(systemName: "magnifyingglass")
+                    Text("Search")
                 }
         }
         .onAppear {

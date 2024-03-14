@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B93D1932BA29813000FCEDB /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B93D1922BA29812000FCEDB /* SearchView.swift */; };
 		5BA294282B97B86600F8ED69 /* App_NasaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA294272B97B86600F8ED69 /* App_NasaApp.swift */; };
 		5BA2942A2B97B86600F8ED69 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA294292B97B86600F8ED69 /* ContentView.swift */; };
 		5BA2942C2B97B86B00F8ED69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BA2942B2B97B86B00F8ED69 /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5B93D1922BA29812000FCEDB /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		5BA294242B97B86600F8ED69 /* App Nasa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "App Nasa.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BA294272B97B86600F8ED69 /* App_NasaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App_NasaApp.swift; sourceTree = "<group>"; };
 		5BA294292B97B86600F8ED69 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				5BA294292B97B86600F8ED69 /* ContentView.swift */,
+				5B93D1922BA29812000FCEDB /* SearchView.swift */,
 				5BF8A3732BA0D0F300344E65 /* ExploreView.swift */,
 				5BA2943D2B980E5A00F8ED69 /* HomePage.swift */,
 				5BA2943B2B980C7900F8ED69 /* photoDetail.swift */,
@@ -172,6 +175,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5BA2943A2B97C2AF00F8ED69 /* PhotoRow.swift in Sources */,
+				5B93D1932BA29813000FCEDB /* SearchView.swift in Sources */,
 				5BA2943C2B980C7A00F8ED69 /* photoDetail.swift in Sources */,
 				5BA294362B97B89C00F8ED69 /* Photo.swift in Sources */,
 				5BA294382B97BA4D00F8ED69 /* PhotoViewModel.swift in Sources */,
